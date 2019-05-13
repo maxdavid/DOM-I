@@ -53,6 +53,18 @@ for (let i = 0; i < navLinks.length; i++) {
   navLinks[i].textContent = siteContent['nav'][`nav-item-${i}`];
 }
 
+const navLinkHello = document.createElement('a');
+navLinkHello.textContent = 'Say Hello';
+nav.append(navLinkHello);
+const navLinkLogin = document.createElement('a');
+navLinkLogin.textContent = 'Login';
+nav.append(navLinkLogin);
+
+navLinks = nav.querySelectorAll('a');
+for (let i = 0; i < navLinks.length; i++) {
+  navLinks[i].style.color = 'green';
+}
+
 let cta = document.getElementsByClassName('cta')[0];
 cta.getElementsByTagName('h1')[0].textContent = siteContent['cta']['h1'];
 cta.getElementsByTagName('button')[0].textContent = siteContent['cta']['button'];
