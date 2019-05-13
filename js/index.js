@@ -53,12 +53,12 @@ for (let i = 0; i < navLinks.length; i++) {
   navLinks[i].textContent = siteContent['nav'][`nav-item-${i}`];
 }
 
-const navLinkHello = document.createElement('a');
-navLinkHello.textContent = 'Say Hello';
-nav.append(navLinkHello);
-const navLinkLogin = document.createElement('a');
-navLinkLogin.textContent = 'Login';
-nav.append(navLinkLogin);
+const newNavLinks = ['Say Hello', 'Login'];
+newNavLinks.forEach( navTitle => {
+  let newNavLink = document.createElement('a');
+  newNavLink.textContent = navTitle;
+  nav.append(newNavLink);
+})
 
 navLinks = nav.querySelectorAll('a');
 for (let i = 0; i < navLinks.length; i++) {
